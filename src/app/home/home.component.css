@@ -1,0 +1,61 @@
+/* Style pour la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Navbar semi-transparente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Style pour chaque élément de la barre de navigation */
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-item a {
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-item a:hover {
+    color: #ffcc00; /* Couleur de survol */
+  }
+  
+  /* Conteneur principal pour les sections de la page */
+  .main-container {
+    margin-top: 60px; /* Ajustement basé sur la hauteur de la navbar */
+  }
+  
+  /* Style pour la section de l'image de fond */
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Image de fond ajustée pour épouser les bords */
+  .hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  /* Texte superposé sur l'image de fond */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Conteneur pour les autres sections */
+  .content-section {
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc pour les sections */
+    color: #333333; /* Texte en couleur foncée */
+  }
+  
