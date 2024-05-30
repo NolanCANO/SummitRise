@@ -1,32 +1,3 @@
-/* Style pour la barre de navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.7); /* Navbar semi-transparente */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0; /* S'assure que la navbar commence au bord gauche de l'écran */
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-/* Style pour chaque élément de la barre de navigation */
-.navbar-item {
-  margin: 0 10px;
-}
-
-.navbar-item a {
-  color: #ffffff; /* Couleur du texte */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar-item a:hover {
-  color: #ffcc00; /* Couleur de survol */
-}
-
 /* Conteneur principal pour les sections de la page */
 .main-container {
   margin-top: 60px; /* Ajustement basé sur la hauteur de la navbar */

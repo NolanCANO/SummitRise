@@ -1,0 +1,59 @@
+/* Style pour la barre de navigation */
+header {
+    display: flex;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    transition: background-color 0.3s;
+    transition: top 0.3s;
+    background-color: var(--background-primary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    height: 80px;
+    cursor: default;
+    color: #ffffff;
+}
+
+header.transparent {
+    background-color: rgba(15, 76, 92, 0.7);
+    top: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    padding: 1.5rem;
+    color: var(--primary);
+}
+
+.navbar {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Style pour chaque élément de la barre de navigation */
+.navbar-item {
+margin: 0 10px;
+}
+
+.navbar-item a {
+text-decoration: none;
+font-weight: bold;
+}
+
+.navbar-item a:hover {
+color: var(--primary); /* Couleur de survol */
+}
+
+.user {
+    display: flex;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+  
