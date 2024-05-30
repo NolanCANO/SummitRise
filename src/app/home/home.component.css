@@ -1,23 +1,28 @@
-/* Conteneur principal pour les sections de la page */
-.main-container {
-  margin-top: 60px; /* Ajustement basé sur la hauteur de la navbar */
+/* Style pour le header */
+app-header {
+  position: relative;
+  z-index: 3; /* Assure que le header reste au-dessus des autres éléments */
+  background-color: #004d66; /* Couleur du header */
 }
 
 /* Style pour la section de l'image de fond */
 .hero {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-/* Image de fond ajustée pour épouser les bords */
-.hero-image {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Texte superposé sur l'image de fond */
 .hero-text {
   position: absolute;
   top: 50%;
@@ -25,9 +30,72 @@
   transform: translate(-50%, -50%);
 }
 
-/* Conteneur pour les autres sections */
-.content-section {
+/* Conteneur pour la section de contenu */
+.content-wrapper {
+  position: relative;
+  margin-top: 100vh; /* Pour permettre à la section de contenu de commencer après la section hero */
+  background-color: white;
+  z-index: 2;
+}
+
+.about-section {
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu */
+  padding: 20px 20px; /* Ajustez le padding pour réduire l'espace blanc */
+  background-color: #f5f5f5; /* Fond gris clair */
+  z-index: 2;
+  min-height: 80vh; /* Ajuste la hauteur pour réduire l'espace */
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-text h2 {
+  font-size: 3em; /* Augmente la taille du titre */
+  margin-bottom: 20px;
+  color: #004d66; /* Assigne la même couleur que le header */
+}
+
+.about-text p {
+  font-size: 1.5em; /* Augmente la taille du texte */
+  line-height: 1.6;
+}
+
+.about-text button {
+  margin-top: 20px;
+}
+
+.about-image {
+  flex: 1;
+  width: 50%;
+  max-height: 70vh; /* Limite la hauteur de l'image */
+  object-fit: cover;
+}
+
+/* Style pour la nouvelle section */
+.schedule-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../../assets/img/escalade_etoile.jpg'); /* Chemin relatif */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   padding: 20px;
-  background-color: #ffffff; /* Fond blanc pour les sections */
-  color: #333333; /* Texte en couleur foncée */
+}
+
+.info-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Boîte semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  margin: 0;
+  font-size: 1.5em;
 }
