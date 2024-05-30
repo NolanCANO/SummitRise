@@ -55,7 +55,7 @@ app-header {
 .about-text h2 {
   font-size: 3em; /* Augmente la taille du titre */
   margin-bottom: 20px;
-  color: #004d66; /* Assigne la même couleur que le header */
+  color: #FB8B24; /* Assigne la même couleur que le header */
 }
 
 .about-text p {
@@ -70,7 +70,7 @@ app-header {
 .about-image {
   flex: 1;
   width: 50%;
-  max-height: 70vh; /* Limite la hauteur de l'image */
+  max-height: 80vh; /* Limite la hauteur de l'image */
   object-fit: cover;
 }
 
@@ -78,12 +78,13 @@ app-header {
 .schedule-section {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  background-image: url('../../assets/img/escalade_etoile.jpg'); /* Chemin relatif */
+  align-items: flex-start;
+  background-image: url('../../assets/img/escalade_etoile.jpg'); /* Chemin correct */
   background-size: cover;
   background-position: center;
   height: 100vh;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .info-box {
@@ -91,11 +92,46 @@ app-header {
   padding: 20px;
   border-radius: 10px;
   width: 25%;
+  height: 300px; /* Ajout de hauteur fixe */
+  margin: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%; /* Permet de mieux gérer l'espace dans la grille */
 }
 
 .info-box h3 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 2em;
+  color: #FB8B24; /* Couleur des icônes */
+}
+
+.info-box p {
+  font-size: 1.2em;
+}
+
+.info-box a {
+  color: #FB8B24; /* Couleur du lien */
+  text-decoration: none;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  width: 22%; /* Réduction de la largeur pour tenir sur une ligne */
+  margin: 10px 0;
+}
+
+.stat-item h4 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #FB8B24; /* Couleur des chiffres */
+}
+
+.stat-item p {
+  font-size: 1.2em;
+  margin: 5px 0 0 0;
 }
