@@ -1,0 +1,21 @@
+.news-box {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+  }
+  
+  .news-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-box h3 {
+    margin: 0 0 0.5rem;
+  }
+  
+  .news-box p {
+    margin: 0;
+  }  
