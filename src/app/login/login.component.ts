@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -18,7 +19,12 @@ import { AuthService } from '../auth.service';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    RouterModule],
+    RouterModule,
+    HttpClientModule
+  ],
+  providers: [
+    AuthService
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

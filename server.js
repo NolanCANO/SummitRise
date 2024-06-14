@@ -1,10 +1,12 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
+app.use(cors()); 
 app.use(bodyParser.json());
 
 const secretKey = 'your_secret_key'; // Replace with your actual secret key
@@ -31,6 +33,7 @@ app.post('/register', (req, res) => {
     password: password,
     admin: false
   })
+  console.log(users);
   const token = jwt.sign({ email: email, password: password, admin: false }, secretKey, { expiresIn: '1h' });
 
   return res.status(201).json({ token });
