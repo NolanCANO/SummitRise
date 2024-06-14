@@ -33,4 +33,9 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('jwtToken');
   }
+
+  isAuthenticated(): boolean {
+    const token = this.getToken();
+    return !!token; // Check if the token exists and is not expired
+  }
 }

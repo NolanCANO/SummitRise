@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const secretKey = 'your_secret_key'; // Replace with your actual secret key
 
 let users = [
-    {email: "admin@admin.fr", password: "admin", admin: true}
+    {email: "admin@admin.fr", password: "password", admin: true}
 ]
 
 app.post('/register', (req, res) => {

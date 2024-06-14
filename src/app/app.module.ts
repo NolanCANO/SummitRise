@@ -4,13 +4,16 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AuthService } from './auth.service';
 import { AuthInterceptor } from './auth.interceptor';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { AuthInterceptor } from './auth.interceptor';
   ],
   providers: [
     AuthService,
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
