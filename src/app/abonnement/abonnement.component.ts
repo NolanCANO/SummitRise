@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-forfait',
+  selector: 'app-abonnement',
   standalone: true,
   imports: [
     CommonModule, 
@@ -26,19 +26,23 @@ import { map } from 'rxjs/operators';
     HappyHourPipe,
     CurrencyPipe
   ],
-  templateUrl: './forfait.component.html',
-  styleUrl: './forfait.component.css'
+  templateUrl: './abonnement.component.html',
+  styleUrl: './abonnement.component.css'
 })
-export class ForfaitComponent {
-  @Input() forfait: any;
+export class AbonnementComponent {
+  @Input() abonnement: any;
 
   isReduced$: Observable<boolean>;
   price$: Observable<number>;
+  price2$: Observable<number>;
 
   constructor(private switchService: PriceSwitchService) {
     this.isReduced$ = this.switchService.isReduced$;
     this.price$ = this.isReduced$.pipe(
-      map(isReduced => isReduced ? this.forfait.reducedPrice : this.forfait.regularPrice)
+      map(isReduced => isReduced ? this.abonnement.reducedPrice : this.abonnement.regularPrice)
+    );
+    this.price2$ = this.isReduced$.pipe(
+      map(isReduced => isReduced ? this.abonnement.reducedPrice2 : this.abonnement.regularPrice2)
     );
   }
 }

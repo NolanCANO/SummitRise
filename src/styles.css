@@ -23,3 +23,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mdc-tab__text-label {
     color: #ffffff!important;
 }
+
+.mat-mdc-tab-body-wrapper {
+    overflow: visible!important;
+}
+
+.mat-mdc-tab-body {
+    overflow: visible!important;
+}
+.mat-mdc-tab-body-content {
+    overflow: visible!important;
+}

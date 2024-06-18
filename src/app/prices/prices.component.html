@@ -16,7 +16,7 @@
     <section class="section" id="id-forfait-abonnement">
         <h2>Forfait et abonnements</h2>
         <div style="display: flex; justify-content: center;">
-            <mat-slide-toggle labelPosition="before" class="white">Tarif normal</mat-slide-toggle>
+            <mat-slide-toggle labelPosition="before" class="white" (change)="onToggleChange($event)">Tarif normal</mat-slide-toggle>
             <p class="mat-slide-toggle white">Tarif réduit</p>
             <span
             matTooltip="Le tarif réduit s'applique aux étudiants, jeunes de moins de 18 ans, demandeurs d'emploi, pompiers, militaires et aux membres de clubs (FFME, FSGT et CAF) sous réserve de la présentation d’un justificatif en cours de validité."
@@ -27,10 +27,14 @@
         </div>
         <mat-tab-group>
             <mat-tab label="1 à 10 sessions" class="white">
-                <app-forfait-list [sessions]="sessions" class="forfait-list"></app-forfait-list>
+                <div class="forfait-list">
+                    <app-forfait *ngFor="let forfait of forfaitData" [forfait]="forfait"></app-forfait>
+                </div>
             </mat-tab>
             <mat-tab label="Abonnements">
-
+                <div class="forfait-list">
+                    <app-abonnement *ngFor="let abonnement of abonnementData" [abonnement]="abonnement"></app-abonnement>
+                </div>
             </mat-tab>
           </mat-tab-group>          
     </section>
