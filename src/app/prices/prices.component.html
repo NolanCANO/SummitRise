@@ -1,0 +1,37 @@
+<div class="main-container">
+    <section>
+        <div class="hero">
+            <img src="img/climber.png" alt="Climber" class="hero-image">
+            <div class="hero-text">
+              <h1>Tarifs, abonnements <br> & cartes cadeaux</h1>
+            </div>
+        </div>
+        <div class="secondary-navbar">
+            <div class="secondary-navbar-item"><a href="/tarifs#id-forfait-abonnement">Forfait et abonnements</a></div>
+            <div class="secondary-navbar-item"><a href="/tarifs#id-forfait-kids">Pour les kids</a></div>
+            <div class="secondary-navbar-item"><a href="/tarifs#id-carte-cadeau">Cartes cadeaux</a></div>
+            <div class="secondary-navbar-item"><a href="/tarifs#id-groupe">Groupes</a></div>
+        </div>
+    </section>
+    <section class="section" id="id-forfait-abonnement">
+        <h2>Forfait et abonnements</h2>
+        <div style="display: flex; justify-content: center;">
+            <mat-slide-toggle labelPosition="before" class="white">Tarif normal</mat-slide-toggle>
+            <p class="mat-slide-toggle white">Tarif réduit</p>
+            <span
+            matTooltip="Le tarif réduit s'applique aux étudiants, jeunes de moins de 18 ans, demandeurs d'emploi, pompiers, militaires et aux membres de clubs (FFME, FSGT et CAF) sous réserve de la présentation d’un justificatif en cours de validité."
+            [matTooltipPosition]="'above'"
+            class="icon">
+                <img src="img/help.svg" alt="Info">
+            </span>
+        </div>
+        <mat-tab-group>
+            <mat-tab label="1 à 10 sessions" class="white">
+                <app-forfait-list [sessions]="sessions" class="forfait-list"></app-forfait-list>
+            </mat-tab>
+            <mat-tab label="Abonnements">
+
+            </mat-tab>
+          </mat-tab-group>          
+    </section>
+</div>

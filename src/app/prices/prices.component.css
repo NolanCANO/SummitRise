@@ -1,0 +1,104 @@
+/* Conteneur principal pour les sections de la page */
+.main-container {
+    margin-top: 60px; /* Ajustement basé sur la hauteur de la navbar */
+}
+
+/* Style pour la section de l'image de fond */
+.hero {
+    position: relative;
+    color: var(--primary);
+    display: flex;
+}
+
+.hero::before {
+    content: "";
+    background: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+h1 {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+}
+  
+  /* Image de fond ajustée pour épouser les bords */
+.hero-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+  
+ /* Texte superposé sur l'image de fond */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+
+.secondary-navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--background-secondary);
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondary-navbar a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.secondary-navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.section {
+    padding: 5rem 3rem;
+}
+
+#id-forfait-abonnement {
+    background-image: url('../../assets/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2 { text-align: center; color: #ffffff;}
+
+.mat-slide-toggle {
+    color: var(--mat-switch-label-text-color);
+    font-family: var(--mat-switch-label-text-font);
+    line-height: var(--mat-switch-label-text-line-height);
+    font-size: var(--mat-switch-label-text-size);
+    letter-spacing: var(--mat-switch-label-text-tracking);
+    font-weight: var(--mat-switch-label-text-weight);
+    margin: unset;
+    align-self: center;
+    margin-left: 0.1rem;
+}
+
+.icon {
+    display: flex;
+    margin-left: 0.2rem;
+    align-content: center;
+}
+
+.forfait-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+}
