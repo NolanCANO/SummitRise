@@ -38,4 +38,11 @@
             </mat-tab>
           </mat-tab-group>          
     </section>
+    <section class="section" id="id-forfait-kids">
+        <h2 style="color: black;">Pour les kids</h2>
+        <div class="forfait-list">
+            <app-forfait *ngFor="let forfait of forfaitKidData" [forfait]="forfait" [black]="true"></app-forfait>
+            <app-abonnement [abonnement]="abonnementKidData" [black]="true"></app-abonnement>
+        </div>
+    </section>
 </div>

@@ -86,6 +86,36 @@ export class PricesComponent {
     }
   ];
 
+  forfaitKidData = [
+    {
+      title: '1 session kids',
+      description: 'Valable toute la journée, jusqu’à ce qu’ils n’aient plus d’énergie !',
+      details: 'Première fois ? 8€ la session + prêt de chaussons !',
+      note: '(à partir de 4 ans)',
+      regularPrice: 10,
+      reducedPrice: 10
+    },
+    {
+      title: '10 sessions kids',
+      description: 'Valable toute la journée, jusqu’à ce qu’ils n’aient plus d’énergie !',
+      details: '',
+      note: '',
+      regularPrice: 80,
+      reducedPrice: 80
+    }
+  ];
+
+  abonnementKidData = {
+    title: 'Infinity kids',
+      description: 'Escalade illimitée pour les enfants de 6 à 12 ans',
+      details: '',
+      note: '',
+      regularPrice: 33,
+      reducedPrice: 33,
+      regularPrice2: 330,
+      reducedPrice2: 330
+  }
+
   constructor(private switchService: PriceSwitchService) {}
 
   onToggleChange(event: any) {

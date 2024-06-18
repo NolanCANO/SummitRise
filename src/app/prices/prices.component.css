@@ -101,3 +101,10 @@ h2 { text-align: center; color: #ffffff;}
     justify-content: center;
     gap: 5rem;
 }
+
+#id-forfait-kids {
+    background-image: url('../../assets/img/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

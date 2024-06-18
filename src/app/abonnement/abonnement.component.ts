@@ -31,6 +31,7 @@ import { map } from 'rxjs/operators';
 })
 export class AbonnementComponent {
   @Input() abonnement: any;
+  @Input() black: boolean = false; 
 
   isReduced$: Observable<boolean>;
   price$: Observable<number>;

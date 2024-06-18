@@ -1,4 +1,4 @@
-<mat-card class="card">
+<mat-card class="card" [ngClass]="{'black-card': black, 'one-price': !forfait.discount}">
     <mat-card-header>
       <mat-card-title>Forfait</mat-card-title>
       <mat-card-subtitle>{{ forfait.title }}</mat-card-subtitle>
@@ -9,7 +9,7 @@
         <p>{{ forfait.note }}</p>
     </mat-card-content>
     <mat-card-footer>
-      <div class="price happy-hour">
+      <div class="price happy-hour" *ngIf="forfait.discount">
         <p>{{ price$ | async | happyHour: forfait.discount | currency:'EUR' }}</p>
         <p>Happy hour</p>
       </div>
