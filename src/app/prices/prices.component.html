@@ -10,7 +10,6 @@
             <div class="secondary-navbar-item"><a href="/tarifs#id-forfait-abonnement">Forfait et abonnements</a></div>
             <div class="secondary-navbar-item"><a href="/tarifs#id-forfait-kids">Pour les kids</a></div>
             <div class="secondary-navbar-item"><a href="/tarifs#id-carte-cadeau">Cartes cadeaux</a></div>
-            <div class="secondary-navbar-item"><a href="/tarifs#id-groupe">Groupes</a></div>
         </div>
     </section>
     <section class="section" id="id-forfait-abonnement">
@@ -43,6 +42,14 @@
         <div class="forfait-list">
             <app-forfait *ngFor="let forfait of forfaitKidData" [forfait]="forfait" [black]="true"></app-forfait>
             <app-abonnement [abonnement]="abonnementKidData" [black]="true"></app-abonnement>
+        </div>
+    </section>
+    <section class="section" id="id-carte-cadeau">
+        <h2>
+            Faîtes plaisir grâce à nos cartes cadeaux
+        </h2>
+        <div class="forfait-list">
+            <app-forfait *ngFor="let forfait of kdoData" [forfait]="forfait"></app-forfait>
         </div>
     </section>
 </div>

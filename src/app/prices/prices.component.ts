@@ -24,6 +24,7 @@ import { PriceSwitchService } from '../price-switch.service';
 export class PricesComponent {
   forfaitData = [
     {
+      subtitle: 'Forfait',
       title: '1 session adulte',
       description: 'Valable toute la journée jusqu\'à ce que vos bras explosent',
       details: 'Happy Hour : de 7h à 16h puis 21h30 à minuit en semaine. A partir de 18h30 les w-e et jours fériés.',
@@ -33,6 +34,7 @@ export class PricesComponent {
       reducedPrice: 16
     },
     {
+      subtitle: 'Forfait',
       title: '10 sessions adulte',
       description: 'Valable à vie, on ne blague pas. A partager à 2, ou à garder pour soi.',
       details: '',
@@ -45,6 +47,7 @@ export class PricesComponent {
 
   abonnementData = [
     {
+      subtitle: 'Forfait',
       title: 'Happy Hour',
       description: 'De la grimpe dans du lun-ven avant 16h ou après 21h30. Week-end et jours fériers après 18h30.',
       details: '',
@@ -55,6 +58,7 @@ export class PricesComponent {
       reducedPrice2: 280
     },
     {
+      subtitle: 'Forfait',
       title: 'Infinity adulte',
       description: 'De la grimpe en illimité et des privilèges SummitRise tous les mois. A vous de jouer !',
       details: '',
@@ -65,6 +69,7 @@ export class PricesComponent {
       reducedPrice2: 520
     },
     {
+      subtitle: 'Forfait',
       title: 'Infinity duo',
       description: 'De la grimpe en illimité et des privilèges SummitRise tous les mois. A partager avec votre autre moitié.',
       details: '',
@@ -75,6 +80,7 @@ export class PricesComponent {
       reducedPrice2: 885
     },
     {
+      subtitle: 'Forfait',
       title: 'Infinity elevated',
       description: 'De la grimpe ET 1 cours de yoga par mois, ainsi que des privilèges SummitRise tous les mois. Vous ne pourrez plus dire que vous n’êtes pas assez souple !',
       details: '',
@@ -88,6 +94,7 @@ export class PricesComponent {
 
   forfaitKidData = [
     {
+      subtitle: 'Forfait',
       title: '1 session kids',
       description: 'Valable toute la journée, jusqu’à ce qu’ils n’aient plus d’énergie !',
       details: 'Première fois ? 8€ la session + prêt de chaussons !',
@@ -96,6 +103,7 @@ export class PricesComponent {
       reducedPrice: 10
     },
     {
+      subtitle: 'Forfait',
       title: '10 sessions kids',
       description: 'Valable toute la journée, jusqu’à ce qu’ils n’aient plus d’énergie !',
       details: '',
@@ -106,7 +114,8 @@ export class PricesComponent {
   ];
 
   abonnementKidData = {
-    title: 'Infinity kids',
+      subtitle: 'Forfait',
+      title: 'Infinity kids',
       description: 'Escalade illimitée pour les enfants de 6 à 12 ans',
       details: '',
       note: '',
@@ -115,6 +124,36 @@ export class PricesComponent {
       regularPrice2: 330,
       reducedPrice2: 330
   }
+
+  kdoData = [
+    {
+      subtitle: 'La carte découverte',
+        title: 'Forfait 1 session',
+        description: 'Entrée valable toute une journée, jusqu’à ce que les bras explosent! Accès au sauna compris si applicable.',
+        details: '',
+        note: '',
+        regularPrice: 17,
+        reducedPrice: 17,
+    },
+    {
+      subtitle: 'La carte assidue',
+        title: 'Forfait 10 sessions',
+        description: '10 entrées d’une journée. Valable à vie (on ne blague pas). A partager à 2 ou à garder pour soi.',
+        details: '',
+        note: '',
+        regularPrice: 140,
+        reducedPrice: 140,
+    },
+    {
+      subtitle: 'La carte passion',
+        title: 'Forfait infinity',
+        description: 'Là on parle. Offrez un an d’escalade, un accès illimité à tous les climbings de SummitRise',
+        details: '',
+        note: '',
+        regularPrice: 600,
+        reducedPrice: 600,
+    }
+  ]
 
   constructor(private switchService: PriceSwitchService) {}
 

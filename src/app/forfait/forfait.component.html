@@ -1,6 +1,6 @@
 <mat-card class="card" [ngClass]="{'black-card': black, 'one-price': !forfait.discount}">
     <mat-card-header>
-      <mat-card-title>Forfait</mat-card-title>
+      <mat-card-title>{{ forfait.subtitle }}</mat-card-title>
       <mat-card-subtitle>{{ forfait.title }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
