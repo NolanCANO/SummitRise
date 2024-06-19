@@ -8,7 +8,7 @@ app-header {
 /* Style pour la section de l'image de fond */
 .hero {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -88,7 +88,7 @@ app-header {
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.8); /* Boîte semi-transparente */
+  background-color: rgba(255, 255, 255, 0.6); /* Boîte semi-transparente */
   padding: 20px;
   border-radius: 10px;
   width: 25%;
@@ -100,7 +100,6 @@ app-header {
 }
 
 .info-box h3 {
-  margin: 0;
   font-size: 2em;
   color: #FB8B24; /* Couleur des icônes */
 }
@@ -134,4 +133,187 @@ app-header {
 .stat-item p {
   font-size: 1.2em;
   margin: 5px 0 0 0;
+}
+
+.stat-item {
+  width: 22%; /* Réduction de la largeur pour tenir sur une ligne */
+  margin: 10px 0;
+  text-align: center;
+}
+
+.stat-item img {
+  width: 160px; /* Ajustez la largeur selon vos besoins */
+  height: 120px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover; /* Assure que l'image couvre bien la taille définie sans déformation */
+  margin-top: 10px;
+  border-radius: 10px; /* Optionnel : ajoute des coins arrondis aux images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre aux images */
+}
+
+
+.kids-section {
+  position: relative;
+  background-image: url('../../assets/img/enfant.jpeg'); /* Remplacez par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.kids-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le contraste */
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.kids-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.kids-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.register-button {
+  background-color: #6200ea;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kids-age {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  margin-top: 30px;
+}
+
+.kids-age h3 {
+  font-size: 2em;
+}
+
+.kids-age p {
+  font-size: 1.2em;
+}
+
+
+
+
+
+.comment-section-wrapper {
+  background-image: url('../../assets/img/Fondnoir.JPG'); /* Remplacez par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-section, .comments-display-section {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
+  padding: 40px;
+  border-radius: 10px;
+  width: 48%; /* Occupe la moitié de l'écran moins un peu de marge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre aux boxes */
+}
+
+.comment-section h2, .comments-display-section h3 {
+  color: #FB8B24; /* Couleur des titres */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#commentsDisplay {
+  max-height: 400px; /* Limite la hauteur pour permettre le défilement */
+  overflow-y: auto; /* Ajoute une barre de défilement verticale */
+  margin-top: 20px;
+}
+
+#commentList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#commentList li {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#commentList li h4 {
+  margin: 0;
+  color: #FB8B24;
+}
+
+#commentList li p {
+  margin: 10px 0 0;
+}
+
+
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: #FFD700;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #FFD700;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }

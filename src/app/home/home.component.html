@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="main-container">
   <div class="hero">
-    <img src="img/climber.png" alt="Climber" class="hero-image">
+    <img src="img/acceuil.jpg" alt="acceuil" class="hero-image">
     <div class="hero-text">
-      <h1>Logo</h1>
+      <img src="img/Climblogo.png" alt="Climblogo">
       <h2>Slogan</h2>
       <p>Petite description</p>
       <button>Bouton</button>
@@ -28,7 +28,7 @@
         <h3 class="icon">🕒 Horaires</h3>
         <p><strong>Du lundi au vendredi</strong><br>de 11h à 22h30</p>
         <p><strong>Le samedi</strong><br>de 10h à 21h30</p>
-        <p><strong>Le dimanche</strong><br>de 10h à 21h30</p>
+        <p><strong>Le dimanche</strong><br>de 10h à 18h30</p>
       </div>
       <div class="info-box">
         <h3 class="icon">💶 Tarifs</h3>
@@ -41,22 +41,85 @@
           <div class="stat-item">
             <h4>1800</h4>
             <p>m2 de surface au sol dans une halle magnifique</p>
+            <img src="img/Salle.JPG" alt="Description de l'image 1">
           </div>
           <div class="stat-item">
             <h4>800</h4>
             <p>m2 de surface grimpable adulte pour débutants et confirmés</p>
+            <img src="img/Mur.JPG" alt="Description de l'image 2">
           </div>
           <div class="stat-item">
             <h4>100</h4>
             <p>m2 d'espace ludique pour les enfants autour d'un volcan !</p>
+            <img src="img/Volcan.JPG" alt="Description de l'image 3">
           </div>
           <div class="stat-item">
             <h4>2500</h4>
-            <p>prises qui n'attendent que vous !</p>
+            <p>prises variées qui n'attendent que vous !</p>
+            <img src="img/Prise.JPG" alt="Description de l'image 4">
           </div>
         </div>
       </div>
     </div>
     
+    <div class="kids-section">
+      <div class="kids-overlay">
+        <h2>L'escalade côté kids</h2>
+        <p>Espace privatisable pour les cours d’escalade, stages pendant les vacances scolaires, anniversaires et grimpe illimitée... Bref, on a pensé à tout pour les kids. Et pour les parents qui voudraient venir prendre un verre ou déjeuner juste à côté.</p>
+        <button class="register-button">J’inscris mes enfants</button>
+        <div class="kids-age">
+          <h3>pour les 4 - 12 ans</h3>
+          <p>Escalader les murs colorés, s’amuser et recommencer à volonté.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-section-wrapper">
+      <div class="comment-section">
+        <h2>Laissez un commentaire</h2>
+        <form (ngSubmit)="onSubmit(commentForm)" #commentForm="ngForm">
+          <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" [(ngModel)]="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="rating">Note:</label>
+            <div class="rating">
+              <input type="radio" id="star5" [(ngModel)]="rating" name="rating" [value]="5" required /><label for="star5" title="5 étoiles">&#9733;</label>
+              <input type="radio" id="star4" [(ngModel)]="rating" name="rating" [value]="4" required /><label for="star4" title="4 étoiles">&#9733;</label>
+              <input type="radio" id="star3" [(ngModel)]="rating" name="rating" [value]="3" required /><label for="star3" title="3 étoiles">&#9733;</label>
+              <input type="radio" id="star2" [(ngModel)]="rating" name="rating" [value]="2" required /><label for="star2" title="2 étoiles">&#9733;</label>
+              <input type="radio" id="star1" [(ngModel)]="rating" name="rating" [value]="1" required /><label for="star1" title="1 étoile">&#9733;</label>
+            </div>
+            <div *ngIf="commentForm.submitted && rating === 0" class="error">La note est obligatoire.</div>
+          </div>
+          <div class="form-group">
+            <label for="comment">Commentaire:</label>
+            <textarea id="comment" [(ngModel)]="comment" name="comment" rows="4" required></textarea>
+            <div *ngIf="commentForm.submitted && !comment" class="error">Le commentaire est obligatoire.</div>
+          </div>
+          <button type="submit">Soumettre</button>
+        </form>
+      </div>
+      <div class="comments-display-section">
+        <h3>Commentaires:</h3>
+        <div id="commentsDisplay">
+          <ul id="commentList">
+            <li *ngFor="let comment of comments">
+              <h4>{{ comment.name }}</h4>
+              <div class="rating-display">
+                <span *ngFor="let star of [].constructor(comment.rating)">&#9733;</span>
+              </div>
+              <p>{{ comment.comment }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>    
+        
+    
+      
   </div>
 </div>
+  
+<script src="home.component.js"></script>
