@@ -24,6 +24,8 @@ let users = [
     }
 ]
 
+let comments = []
+
 app.post('/register', (req, res) => {
   const { name, email, password } = req.body;
 
@@ -56,23 +58,38 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { email, password } = req.body;
-  
-    if (!email || !password) {
-      return res.status(400).send('Email and password are required');
-    }
-  
-    const user = users.find(user => user.email === email && user.password === password);
-  
-    if (!user) {
-      return res.status(401).send('Invalid credentials');
-    }
-  
-    const token = jwt.sign(user, secretKey, { expiresIn: '1h' });
-  
-    return res.status(200).json({ token });
-  });
-  
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).send('Email and password are required');
+  }
+
+  const user = users.find(user => user.email === email && user.password === password);
+
+  if (!user) {
+    return res.status(401).send('Invalid credentials');
+  }
+
+  const token = jwt.sign(user, secretKey, { expiresIn: '1h' });
+  console.log('User logged in:', email);
+
+  return res.status(200).json({ token });
+});
+
+// Route pour obtenir les commentaires
+app.get('/comments', (req, res) => {
+  console.log('Fetching comments');
+  res.json(comments);
+});
+
+// Route pour ajouter un commentaire
+app.post('/comments', (req, res) => {
+  const { name, rating, comment } = req.body;
+  const newComment = { name, rating, comment };
+  comments.push(newComment);
+  console.log('Comment added:', newComment);
+  res.status(201).json(newComment);
+});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
