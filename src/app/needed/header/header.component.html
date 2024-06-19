@@ -6,8 +6,12 @@
         <div class="navbar-item"><a routerLink="/contact">Contact</a></div>
         <div class="navbar-item"><a routerLink="/account">Compte</a></div>
     </div>
-    <div class="user">
+    <div class="user" *ngIf="!isConnected">
         <button mat-raised-button color="primary">Inscription</button>
         <button mat-flat-button color="primary">Connexion</button>
+    </div>
+    <div class="user" *ngIf="isConnected">
+        <a routerLink="/profile">Welcome {{ name }}</a>
+        <button mat-flat-button color="primary" (click)="logout()">Déconnexion</button>
     </div>
 </header>
