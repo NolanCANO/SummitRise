@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 
@@ -32,7 +32,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   message: string = '';
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -54,6 +54,7 @@ export class LoginComponent {
         response => {
           this.authService.saveToken(response.token);
           this.message = 'Login successful!';
+          this.router.navigate(['/profile'])
         },
         error => {
           this.message = 'Login failed';

@@ -1,4 +1,52 @@
-<div>
-    <h2>Profile Page</h2>
-    <p>Welcome to your profile!</p>
-</div>
+<app-header></app-header>
+<div class="profile-container">
+    <div class="profile-background"></div>
+    <mat-card class="profile-card" *ngIf="!isEditing; else editForm">
+      <mat-card-header>
+        <div mat-card-avatar class="profile-picture"></div>
+        <mat-card-title>{{ name }}</mat-card-title>
+        <mat-card-subtitle>{{ email }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ bio }}</p>
+        <mat-divider></mat-divider>
+        <div class="profile-details">
+          <div>
+            <mat-icon>work</mat-icon>
+            <span>{{ work }}</span>
+          </div>
+          <div>
+            <mat-icon>location_on</mat-icon>
+            <span>{{ location }}</span>
+          </div>
+          <div>
+            <mat-icon>school</mat-icon>
+            <span>{{ university }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="editProfile()">Edit Profile</button>
+        <button mat-button>View Comments</button>
+      </mat-card-actions>
+    </mat-card>
+    <ng-template #editForm>
+      <mat-card class="profile-card">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Bio</mat-label>
+            <textarea matInput formControlName="bio"></textarea>
+          </mat-form-field>
+          <mat-card-actions>
+            <button mat-button color="primary" type="submit">Save</button>
+            <button mat-button type="button" (click)="cancelEdit()">Cancel</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </ng-template>
+  </div>
+  

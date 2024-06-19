@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  register(email: string, password: string): Observable<any> {
+  register(name: string, email: string, password: string): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>(this.registerUrl, { email, password }, { headers });
+    return this.http.post<any>(this.registerUrl, { name, email, password }, { headers });
   }
 
   login(email: string, password: string): Observable<any> {
@@ -37,5 +38,27 @@ export class AuthService {
   isAuthenticated(): boolean {
     const token = this.getToken();
     return !!token; // Check if the token exists and is not expired
+  }
+
+  decodeToken(token: string): any {
+    try {
+      return jwtDecode(token);
+    } catch (Error) {
+      return null;
+    }
+  }
+
+  getTokenPayload(token: string): any {
+    const decodedToken = this.decodeToken(token);
+    return decodedToken ? decodedToken : null;
+  }
+
+  getValueFromToken(token: string | null, key: string): any {
+    if (!token) {
+      return null;
+    }
+    
+    const payload = this.getTokenPayload(token);
+    return payload ? payload[key] : null;
   }
 }
