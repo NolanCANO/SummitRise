@@ -3,15 +3,15 @@
     <div class="navbar">
         <div class="navbar-item"><a routerLink="/">Home</a></div>
         <div class="navbar-item"><a routerLink="/tarifs">Tarifs</a></div>
-        <div class="navbar-item"><a routerLink="/contact">Contact</a></div>
-        <div class="navbar-item"><a routerLink="/account">Compte</a></div>
+        <div class="navbar-item"><a routerLink="/news">Contact</a></div>
+        <div class="navbar-item"><a routerLink="/profile">Compte</a></div>
     </div>
     <div class="user" *ngIf="!isConnected">
-        <button mat-raised-button color="primary">Inscription</button>
-        <button mat-flat-button color="primary">Connexion</button>
+        <button mat-raised-button color="primary" routerLink="/register">Inscription</button>
+        <button mat-flat-button color="primary" routerLink="/login">Connexion</button>
     </div>
     <div class="user" *ngIf="isConnected">
-        <a routerLink="/profile">Welcome {{ name }}</a>
+        <a style="text-decoration: none;color: inherit;cursor: pointer;" routerLink="/profile">Welcome {{ name }}</a>
         <button mat-flat-button color="primary" (click)="logout()">Déconnexion</button>
     </div>
 </header>

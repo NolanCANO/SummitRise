@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../auth.service';
+import { NeededModule } from '../needed/needed.module';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ import { AuthService } from '../auth.service';
     MatCardModule,
     MatIconModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NeededModule
   ],
   providers: [
     AuthService
