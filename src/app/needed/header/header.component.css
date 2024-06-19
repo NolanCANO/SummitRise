@@ -1,7 +1,5 @@
-/* Style pour la barre de navigation */
 header {
     display: flex;
-    /* background-color: rgba(0, 0, 0, 0.7); */
     transition: background-color 0.3s;
     transition: top 0.3s;
     background-color: var(--background-primary);
@@ -37,7 +35,6 @@ header.transparent {
     justify-content: center;
 }
 
-/* Style pour chaque élément de la barre de navigation */
 .navbar-item {
     margin: 0 10px;
 }
@@ -48,7 +45,7 @@ header.transparent {
 }
 
 .navbar-item a:hover {
-color: var(--primary); /* Couleur de survol */
+color: var(--primary);
 }
 
 .user {

@@ -1,11 +1,9 @@
-/* Style pour le header */
 app-header {
   position: relative;
-  z-index: 3; /* Assure que le header reste au-dessus des autres éléments */
-  background-color: #004d66; /* Couleur du header */
+  z-index: 3;
+  background-color: #004d66;
 }
 
-/* Style pour la section de l'image de fond */
 .hero {
   position: fixed;
   top: 0;
@@ -30,21 +28,20 @@ app-header {
   transform: translate(-50%, -50%);
 }
 
-/* Conteneur pour la section de contenu */
 .content-wrapper {
   position: relative;
-  margin-top: 100vh; /* Pour permettre à la section de contenu de commencer après la section hero */
+  margin-top: 100vh;
   background-color: white;
   z-index: 2;
 }
 
 .about-section {
   display: flex;
-  align-items: center; /* Centre verticalement le contenu */
-  padding: 20px 20px; /* Ajustez le padding pour réduire l'espace blanc */
-  background-color: #f5f5f5; /* Fond gris clair */
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #f5f5f5;
   z-index: 2;
-  min-height: 80vh; /* Ajuste la hauteur pour réduire l'espace */
+  min-height: 80vh;
 }
 
 .about-text {
@@ -53,13 +50,13 @@ app-header {
 }
 
 .about-text h2 {
-  font-size: 3em; /* Augmente la taille du titre */
+  font-size: 3em;
   margin-bottom: 20px;
-  color: #FB8B24; /* Assigne la même couleur que le header */
+  color: #FB8B24;
 }
 
 .about-text p {
-  font-size: 1.5em; /* Augmente la taille du texte */
+  font-size: 1.5em;
   line-height: 1.6;
 }
 
@@ -70,16 +67,15 @@ app-header {
 .about-image {
   flex: 1;
   width: 50%;
-  max-height: 80vh; /* Limite la hauteur de l'image */
+  max-height: 80vh;
   object-fit: cover;
 }
 
-/* Style pour la nouvelle section */
 .schedule-section {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  background-image: url('../../assets/img/escalade_etoile.jpg'); /* Chemin correct */
+  background-image: url('../../assets/img/escalade_etoile.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -88,20 +84,20 @@ app-header {
 }
 
 .info-box {
-  background-color: rgba(255, 255, 255, 0.6); /* Boîte semi-transparente */
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 10px;
   width: 25%;
-  height: 300px; /* Ajout de hauteur fixe */
+  height: 300px;
   margin: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 1 30%; /* Permet de mieux gérer l'espace dans la grille */
+  flex: 1 1 30%;
 }
 
 .info-box h3 {
   font-size: 2em;
-  color: #FB8B24; /* Couleur des icônes */
+  color: #FB8B24;
 }
 
 .info-box p {
@@ -109,7 +105,7 @@ app-header {
 }
 
 .info-box a {
-  color: #FB8B24; /* Couleur du lien */
+  color: #FB8B24;
   text-decoration: none;
 }
 
@@ -120,14 +116,14 @@ app-header {
 }
 
 .stat-item {
-  width: 22%; /* Réduction de la largeur pour tenir sur une ligne */
+  width: 22%;
   margin: 10px 0;
 }
 
 .stat-item h4 {
   font-size: 2.5em;
   margin: 0;
-  color: #FB8B24; /* Couleur des chiffres */
+  color: #FB8B24;
 }
 
 .stat-item p {
@@ -136,24 +132,23 @@ app-header {
 }
 
 .stat-item {
-  width: 22%; /* Réduction de la largeur pour tenir sur une ligne */
+  width: 22%;
   margin: 10px 0;
   text-align: center;
 }
 
 .stat-item img {
-  width: 160px; /* Ajustez la largeur selon vos besoins */
-  height: 120px; /* Ajustez la hauteur selon vos besoins */
-  object-fit: cover; /* Assure que l'image couvre bien la taille définie sans déformation */
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
   margin-top: 10px;
-  border-radius: 10px; /* Optionnel : ajoute des coins arrondis aux images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre aux images */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .kids-section {
   position: relative;
-  background-image: url('../../assets/img/enfant.jpeg'); /* Remplacez par le chemin de votre image */
+  background-image: url('../../assets/img/enfant.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -165,7 +160,7 @@ app-header {
 }
 
 .kids-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le contraste */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   border-radius: 10px;
   width: 80%;
@@ -207,12 +202,8 @@ app-header {
   font-size: 1.2em;
 }
 
-
-
-
-
 .comment-section-wrapper {
-  background-image: url('../../assets/img/Fondnoir.JPG'); /* Remplacez par le chemin de votre image */
+  background-image: url('../../assets/img/Fondnoir.JPG');
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -221,15 +212,15 @@ app-header {
 }
 
 .comment-section, .comments-display-section {
-  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 10px;
-  width: 48%; /* Occupe la moitié de l'écran moins un peu de marge */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre aux boxes */
+  width: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .comment-section h2, .comments-display-section h3 {
-  color: #FB8B24; /* Couleur des titres */
+  color: #FB8B24;
 }
 
 .form-group {
@@ -258,8 +249,8 @@ button[type="submit"] {
 }
 
 #commentsDisplay {
-  max-height: 400px; /* Limite la hauteur pour permettre le défilement */
-  overflow-y: auto; /* Ajoute une barre de défilement verticale */
+  max-height: 400px;
+  overflow-y: auto;
   margin-top: 20px;
 }
 
@@ -284,8 +275,6 @@ button[type="submit"] {
 #commentList li p {
   margin: 10px 0 0;
 }
-
-
 
 .rating {
   display: flex;
@@ -318,8 +307,6 @@ button[type="submit"] {
   margin-top: 5px;
 }
 
-
-/* Style pour le footer */
 footer {
   position: relative;
   background-color: #004d66;
@@ -354,12 +341,11 @@ body {
   flex-direction: column;
 }
 
-/* Style pour le footer */
 app-footer {
   position: relative;
   background-color: rgb(15, 77, 92);
   color: white;
   text-align: center;
   padding: 20px 0;
-  z-index: 4; /* Assurez-vous que le footer est au-dessus des autres éléments */
+  z-index: 4;
 }

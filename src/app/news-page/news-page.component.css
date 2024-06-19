@@ -1,23 +1,19 @@
-/* Conteneur principal pour les sections de la page */
 .main-container {
-  margin-top: 60px; /* Ajustement basé sur la hauteur de la navbar */
+  margin-top: 60px;
 }
 
-/* Style pour la section de l'image de fond */
 .hero {
   position: relative;
   text-align: center;
   color: white;
 }
 
-/* Image de fond ajustée pour épouser les bords */
 .hero-image {
   width: 100%;
   height: 40vh;
   object-fit: cover;
 }
 
-/* Texte superposé sur l'image de fond */
 .hero-text {
   position: absolute;
   left: 50%;
@@ -28,7 +24,7 @@
 .content-wrapper {
   padding: 1rem;
   text-align: center;
-  background-color: white; /* Ajouté pour s'assurer que le fond est blanc */
+  background-color: white;
 }
 
 button {
@@ -48,5 +44,5 @@ app-footer {
   color: white;
   text-align: center;
   padding: 20px 0;
-  z-index: 4; /* Assurez-vous que le footer est au-dessus des autres éléments */
+  z-index: 4;
 }
