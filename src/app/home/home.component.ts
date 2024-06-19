@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NeededModule } from '../needed/needed.module';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommentService } from '../comment.service';
+import { AuthService } from '../auth.service';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +16,8 @@ import { CommentService } from '../comment.service';
     CommonModule,
     NeededModule,
     FormsModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class HomeComponent implements OnInit {
@@ -20,17 +25,28 @@ export class HomeComponent implements OnInit {
   name: string = '';
   rating: number = 0;
   comment: string = '';
+  isConnected: boolean = false;
+  isAdmin: boolean = false;
 
-  constructor(private commentService: CommentService) { }
+  constructor(private commentService: CommentService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.fetchComments();
+    this.isConnected = this.authService.isAuthenticated();
+    this.isAdmin = this.authService.isAdmin();
+    this.name = this.authService.getValueFromToken(this.authService.getToken(), 'name');
   }
 
   fetchComments(): void {
     this.commentService.getComments().subscribe(data => {
       this.comments = data;
     });
+  }
+
+  deleteComment(index: number): void {
+    this.commentService.deleteComment(index.toString()).subscribe(data => {
+      this.comments = data;
+    })
   }
 
   onSubmit(commentForm: NgForm): void {

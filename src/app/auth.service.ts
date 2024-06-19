@@ -40,6 +40,11 @@ export class AuthService {
     return !!token; // Check if the token exists and is not expired
   }
 
+  isAdmin(): boolean {
+    const token = this.getToken();
+    return this.getValueFromToken(token,'admin');
+  }
+
   decodeToken(token: string): any {
     try {
       return jwtDecode(token);
