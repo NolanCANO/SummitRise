@@ -1,0 +1,21 @@
+<mat-card class="card" [ngClass]="{'black-card': black}">
+    <mat-card-header>
+      <mat-card-title>Forfait</mat-card-title>
+      <mat-card-subtitle>{{ abonnement.title }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{ abonnement.description }}</p>
+        <p>{{ abonnement.details }}</p>
+        <p>{{ abonnement.note }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      <div class="price happy-hour">
+        <p>{{ price$ | async | currency:'EUR' }}</p>
+        <p>/ mois</p>
+      </div>
+      <div class="price regular">
+        <p>{{ price2$ | async | currency:'EUR'}}</p>
+        <p>l'année</p>
+      </div>
+    </mat-card-footer>
+</mat-card>
