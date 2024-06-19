@@ -16,5 +16,6 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'tarifs', component: PricesComponent },
-  { path: 'news', component: NewsPageComponent }
+  { path: 'news', component: NewsPageComponent },
+  { path: '**', loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent)}
 ]
