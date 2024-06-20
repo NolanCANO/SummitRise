@@ -1,66 +1,23 @@
 <app-header></app-header>
-<div class="main-container">
-  <div class="hero">
-    <img src="img/acceuil.jpg" alt="acceuil" class="hero-image">
-    <div class="hero-text">
-      <img src="img/Climblogo.png" alt="Climblogo" class="hero-logo">
-      <h1 class="hero-title">SummitRise</h1>
-      <h2 class="hero-subtitle">Atteignez de nouveaux sommets, un défi à la fois.</h2>
-      <button class="discover-button">Commencer l'escalade</button>
-    </div>
-  </div>
-
-
-  <div class="content-wrapper">
-    <div class="about-section" id="section2">
-      <div class="about-text">
-        <h2>L'histoire de SummitRise</h2>
-        <p>Ouvert depuis 2024, SummitRise est une salle d'escalade de bloc située à Toulouse, dans le Sud de la France. Implantée désormais en bordure de Garonne et à proximité du centre-ville, elle a pris place dans une halle moderne et spacieuse. Pour progresser en escalade, pour vous amuser en famille ou entre amis, pour boire un coup au bar, ou encore profiter du restaurant et des plats préparés avec amour et passion par notre chef cuisinier, nous vous accueillons tous les jours dans une atmosphère chaleureuse et familiale.</p>
-        <button class="discover-button">Nous Découvrir</button>
+<div class="page-content">
+  <div class="main-container">
+    <div class="hero">
+      <img src="img/acceuil.jpg" alt="acceuil" class="hero-image">
+      <div class="hero-text">
+        <img src="img/Climblogo.png" alt="Climblogo" class="hero-logo">
+        <h1 class="hero-title">SummitRise</h1>
+        <h2 class="hero-subtitle">Atteignez de nouveaux sommets, un défi à la fois.</h2>
+        <button class="discover-button" routerLink="/news"><a>Commencer l'escalade</a></button>
       </div>
     </div>
-
-
-    <!-- Nouvelle section ajoutée pour "Horaire", "Tarif" et "Stats" -->
-    <div class="schedule-section">
-      <div class="info-box">
-        <h3 class="icon">🕒 Horaires</h3>
-        <p><strong>Du lundi au vendredi</strong><br>de 11h à 22h30</p>
-        <p><strong>Le samedi</strong><br>de 10h à 21h30</p>
-        <p><strong>Le dimanche</strong><br>de 10h à 18h30</p>
-      </div>
-      <div class="info-box">
-        <h3 class="icon">💶 Tarifs</h3>
-        <p><strong>Entrée à l'unité</strong></p>
-        <p>Normal : 18 €<br>Réduit : 10.80 €<br>Kids : 10 €</p>
-        <p><a href="http://localhost:4200/tarifs">voir tous les tarifs</a></p>
-      </div>
-      <div class="info-box">
-        <div class="stats">
-          <div class="stat-item">
-            <h4>1800</h4>
-            <p>m2 de surface au sol dans une halle magnifique</p>
-            <img src="img/Salle.JPG" alt="Description de l'image 1">
-          </div>
-          <div class="stat-item">
-            <h4>800</h4>
-            <p>m2 de surface grimpable adulte pour débutants et confirmés</p>
-            <img src="img/Mur.JPG" alt="Description de l'image 2">
-          </div>
-          <div class="stat-item">
-            <h4>100</h4>
-            <p>m2 d'espace ludique pour les enfants autour d'un volcan !</p>
-            <img src="img/Volcan.JPG" alt="Description de l'image 3">
-          </div>
-          <div class="stat-item">
-            <h4>2500</h4>
-            <p>prises variées qui n'attendent que vous !</p>
-            <img src="img/Prise.JPG" alt="Description de l'image 4">
-          </div>
+    <div class="content-wrapper">
+      <div class="about-section" id="section2">
+        <div class="about-text">
+          <h2>L'histoire de SummitRise</h2>
+          <p>Ouvert depuis 2024, SummitRise est une salle d'escalade de bloc située à Toulouse, dans le Sud de la France. Implantée désormais en bordure de Garonne et à proximité du centre-ville, elle a pris place dans une halle moderne et spacieuse. Pour progresser en escalade, pour vous amuser en famille ou entre amis, pour boire un coup au bar, ou encore profiter du restaurant et des plats préparés avec amour et passion par notre chef cuisinier, nous vous accueillons tous les jours dans une atmosphère chaleureuse et familiale.</p>
+          <button class="discover-button">Nous Découvrir</button>
         </div>
-        <img src="img/climbing-gym.png" alt="Climbing Gym" class="about-image">
       </div>
-
       <div class="schedule-section">
         <div class="info-box">
           <h3 class="icon">🕒 Horaires</h3>
@@ -71,8 +28,8 @@
         <div class="info-box">
           <h3 class="icon">💶 Tarifs</h3>
           <p><strong>Entrée à l'unité</strong></p>
-          <p>Normal : 15 €<br>Réduit : 13 €<br>Kids : 9 €</p>
-          <p><a href="#">voir tous les tarifs</a></p>
+          <p>Normal : 18 €<br>Réduit : 10.80 €<br>Kids : 10 €</p>
+          <p><a href="http://localhost:4200/tarifs">voir tous les tarifs</a></p>
         </div>
         <div class="info-box">
           <div class="stats">
@@ -99,7 +56,6 @@
           </div>
         </div>
       </div>
-
       <div class="kids-section">
         <div class="kids-overlay">
           <h2>L'escalade côté kids</h2>
@@ -111,7 +67,6 @@
           </div>
         </div>
       </div>
-
       <div class="comment-section-wrapper">
         <div class="comment-section">
           <h2>Laissez un commentaire</h2>
