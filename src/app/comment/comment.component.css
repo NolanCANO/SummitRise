@@ -1,0 +1,50 @@
+li {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  li h4 {
+    margin: 0;
+    color: #FB8B24;
+  }
+  
+  li p {
+    margin: 10px 0 0;
+  }
+  
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 2em;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+  .rating input[type="radio"]:checked ~ label {
+    color: #FFD700;
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #FFD700;
+  }
+
+  button[type="submit"] {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

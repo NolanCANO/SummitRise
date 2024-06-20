@@ -6,6 +6,7 @@ import { CommentService } from '../comment.service';
 import { AuthService } from '../auth.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { CommentComponent } from '../comment/comment.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     NeededModule,
     FormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    CommentComponent
   ]
 })
 export class HomeComponent implements OnInit {
@@ -26,26 +28,24 @@ export class HomeComponent implements OnInit {
   rating: number = 0;
   comment: string = '';
   isConnected: boolean = false;
-  isAdmin: boolean = false;
 
   constructor(private commentService: CommentService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.fetchComments();
     this.isConnected = this.authService.isAuthenticated();
-    this.isAdmin = this.authService.isAdmin();
     this.name = this.authService.getValueFromToken(this.authService.getToken(), 'name');
   }
 
   fetchComments(): void {
     this.commentService.getComments().subscribe(data => {
-      this.comments = data;
+      this.comments = data || this.comments;
     });
   }
 
   deleteComment(index: number): void {
     this.commentService.deleteComment(index.toString()).subscribe(data => {
-      this.comments = data;
+      this.comments = data || this.comments;
     })
   }
 

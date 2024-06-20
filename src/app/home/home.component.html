@@ -72,10 +72,6 @@
           <h2>Laissez un commentaire</h2>
           <form (ngSubmit)="onSubmit(commentForm)" #commentForm="ngForm">
             <div class="form-group">
-              <label for="name">Nom:</label>
-              <input type="text" id="name" [(ngModel)]="name" name="name">
-            </div>
-            <div class="form-group">
               <label for="rating">Note:</label>
               <div class="rating">
                 <input type="radio" id="star5" [(ngModel)]="rating" name="rating" [value]="5" required /><label for="star5" title="5 étoiles">&#9733;</label>
@@ -98,18 +94,7 @@
           <h3>Commentaires:</h3>
           <div id="commentsDisplay">
             <ul id="commentList">
-              <li *ngFor="let comment of comments; let i = index" style="display: flex;">
-                <div>
-                  <h4>{{ comment.name }}</h4>
-                  <div class="rating-display">
-                    <span *ngFor="let star of [].constructor(comment.rating)">&#9733;</span>
-                  </div>
-                  <p>{{ comment.comment }}</p>
-                </div>
-                <button mat-button *ngIf="isAdmin" (click)="deleteComment(i)">
-                  <mat-icon>delete</mat-icon>
-                </button>
-              </li>
+              <app-comment *ngFor="let comment of comments; let i = index" [comment]="comment" [id]="i" (deleteEvent)="deleteComment($event)"></app-comment>
             </ul>
           </div>
         </div>
