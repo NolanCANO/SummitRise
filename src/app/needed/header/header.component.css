@@ -60,3 +60,9 @@ color: var(--primary); /* Couleur de survol */
 a {
     text-decoration: none;
 }
+
+.hero-logo {
+    width: 35%;
+    height: auto;
+    margin-top: -35px;
+  }
