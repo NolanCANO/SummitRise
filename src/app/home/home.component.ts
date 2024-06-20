@@ -7,6 +7,7 @@ import { AuthService } from '../auth.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommentComponent } from '../comment/comment.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ import { CommentComponent } from '../comment/comment.component';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    CommentComponent
+    CommentComponent,
+    RouterModule
   ]
 })
 export class HomeComponent implements OnInit {

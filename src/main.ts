@@ -9,7 +9,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(
-      RouterModule.forRoot(routes)
+      RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })
     ), provideAnimationsAsync(), provideHttpClient()
   ]
 }).catch(err => console.error(err));
