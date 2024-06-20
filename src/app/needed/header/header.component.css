@@ -33,6 +33,7 @@ header.transparent {
     padding: 1.5rem;
     width: 100%;
     justify-content: center;
+    gap: 2rem;
 }
 
 .navbar-item {
