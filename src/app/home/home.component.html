@@ -103,12 +103,17 @@
           <h3>Commentaires:</h3>
           <div id="commentsDisplay">
             <ul id="commentList">
-              <li *ngFor="let comment of comments">
-                <h4>{{ comment.name }}</h4>
-                <div class="rating-display">
-                  <span *ngFor="let star of [].constructor(comment.rating)">&#9733;</span>
+              <li *ngFor="let comment of comments; let i = index" style="display: flex;">
+                <div>
+                  <h4>{{ comment.name }}</h4>
+                  <div class="rating-display">
+                    <span *ngFor="let star of [].constructor(comment.rating)">&#9733;</span>
+                  </div>
+                  <p>{{ comment.comment }}</p>
                 </div>
-                <p>{{ comment.comment }}</p>
+                <button mat-button *ngIf="isAdmin" (click)="deleteComment(i)">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </li>
             </ul>
           </div>

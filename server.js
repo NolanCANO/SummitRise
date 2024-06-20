@@ -91,6 +91,19 @@ app.post('/comments', (req, res) => {
   res.status(201).json(newComment);
 });
 
+app.delete('/comments/:index', (req, res) => {
+  const index = parseInt(req.params.index, 10);
+
+  console.log("Deleting comment: ", index);
+
+  if (index >= 0 && index < comments.length) {
+    comments.splice(index, 1);
+    res.status(204).json(comments);
+  } else {
+    res.status(404).send('Comment not found');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
