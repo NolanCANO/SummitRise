@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="profile-container">
+<div class="page-content">
+  <div class="profile-container">
     <div class="profile-background"></div>
     <mat-card class="profile-card" *ngIf="!isEditing; else editForm">
       <mat-card-header>
@@ -49,4 +50,5 @@
       </mat-card>
     </ng-template>
   </div>
-<app-footer></app-footer>
+  <app-footer></app-footer>
+</div>

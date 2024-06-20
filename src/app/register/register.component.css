@@ -1,9 +1,12 @@
-.register-container {
+  .register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    background-image: url('../../assets/img/Mousqueton.JPG');
+    background-size: cover;
+    background-position: center;
   }
   
   mat-card {
@@ -31,4 +34,27 @@
   
   .signup-link span {
     margin-right: 0.5rem;
+  }
+
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  footer {
+    position: relative;
+    background-color: #004d66;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 2;
+  }
+
+  app-footer {
+    background-color: rgb(15, 77, 92);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 4;
   }
