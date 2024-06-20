@@ -1,9 +1,9 @@
 <header [ngClass]="{'transparent': isTransparent, 'solid': !isTransparent}">
-    <a class="title" routerLink="/"><strong>SummitRise</strong></a>
+    <a class="title" routerLink="/"><img src="img/Climblogo.png" alt="Climblogo" class="hero-logo"></a>
     <div class="navbar">
         <div class="navbar-item"><a routerLink="/">Home</a></div>
         <div class="navbar-item"><a routerLink="/tarifs">Tarifs</a></div>
-        <div class="navbar-item"><a routerLink="/news">Contact</a></div>
+        <div class="navbar-item"><a routerLink="/news">Actus</a></div>
         <div class="navbar-item"><a routerLink="/profile">Compte</a></div>
     </div>
     <div class="user" *ngIf="!isConnected">
