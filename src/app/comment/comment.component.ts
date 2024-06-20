@@ -26,7 +26,7 @@ export class CommentComponent {
 
   ngOnInit(): void {
     this.isAdmin = this.authService.isAdmin();
-    this.comment.author = this.comment.author || 'Anonyme';
+    this.comment.author = this.comment.name || 'Anonyme';
   }
 
   deleteComment() {
