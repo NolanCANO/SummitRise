@@ -1,0 +1,12 @@
+<li style="display: flex;">
+    <div>
+      <h4>{{ comment.author }}</h4>
+      <div class="rating-display">
+        <span *ngFor="let star of [].constructor(comment.rating)">&#9733;</span>
+      </div>
+      <p>{{ comment.comment }}</p>
+    </div>
+    <button mat-button *ngIf="isAdmin" (click)="deleteComment()">
+      <mat-icon>delete</mat-icon>
+    </button>
+</li>

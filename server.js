@@ -98,7 +98,7 @@ app.delete('/comments/:index', (req, res) => {
 
   if (index >= 0 && index < comments.length) {
     comments.splice(index, 1);
-    res.status(204).json(comments);
+    res.status(200).json(comments);
   } else {
     res.status(404).send('Comment not found');
   }
