@@ -8,6 +8,7 @@ import { NeededModule } from '../needed/needed.module';
 interface NewsItem {
   title: string;
   content: string;
+  imageUrl: string;
 }
 
 @Component({
@@ -24,10 +25,15 @@ interface NewsItem {
   styleUrl: './news-page.component.css'
 })
 export class NewsPageComponent {
-  allActus: NewsItem[] = Array.from({ length: 21 }, (_, i) => ({
-    title: `Actu ${i + 1}`,
-    content: `Content of the news ${i + 1}`
-  }));
+  allActus: NewsItem[] = [
+    { title: 'Collab Apple', content: 'Une chance unique de gagner un nouveau téléphone', imageUrl: 'img/actu1.jpg' },
+    { title: 'Nouvelle Prise', content: 'Un nouveau stock de prise unique vien d\'arriver à SummitRise !', imageUrl: 'img/actu2.jpg' },
+    { title: 'Plat Unique', content: 'Une nouvelle variété de plats a été ajoutée au menu.', imageUrl: 'img/actu3.jpg' },
+    { title: 'Soirée Jeu', content: 'Nous organisons une soirée jeu vendredi 27 septembre de 18h à 21h', imageUrl: 'img/actu4.jpg' },
+    { title: 'Concour escaclade', content: 'Un concours pour le titre de champion départemental aura lieu lundi prochain', imageUrl: 'img/actu5.jpg' },
+    { title: 'Via Ferrata', content: 'Une Via Ferrata est organisée à Saint-Antonin en août. Pensez à réserver votre place !', imageUrl: 'img/actu6.jpg' },
+    { title: 'Offre Flash', content: 'Du 2 au 28 Juin, profiter d\'une entrée simple à 7€ et des carnets 10 entrées à 60€', imageUrl: 'img/actu7.jpg' },
+  ];
   displayedActus: NewsItem[] = [];
   itemsToShow = 6;
 

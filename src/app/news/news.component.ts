@@ -12,4 +12,5 @@ import { CommonModule } from '@angular/common';
 export class NewsComponent {
   @Input() title: string = 'Actus';
   @Input() content: string = '';
+  @Input() imageUrl: string = '';
 }

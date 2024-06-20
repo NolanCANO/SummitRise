@@ -1,21 +1,44 @@
 .news-box {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
-  }
-  
-  .news-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .news-box h3 {
-    margin: 0 0 0.5rem;
-  }
-  
-  .news-box p {
-    margin: 0;
-  }  
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  overflow: hidden;
+  width: calc(100% - 2rem);
+  width: 350px;
+}
+
+.news-image {
+  width: 100%;
+  height: 200px; /* Taille fixe pour toutes les images */
+  object-fit: cover; /* Ajuste l'image sans déformation */
+  border-radius: 15px 15px 0 0; /* Applique les coins arrondis à l'image */
+}
+
+.news-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.news-box h3 {
+  margin: 0 0 0.5rem;
+  color: #FB8B24; /* Couleur orange */
+  text-decoration: none; /* Retire le soulignement */
+}
+
+.news-box a {
+  text-decoration: none; /* Retire le soulignement des liens */
+  color: inherit; /* Utilise la couleur héritée */
+}
+
+.news-box a:hover {
+  text-decoration: underline; /* Ajoute le soulignement au survol */
+}
+
+.news-box p {
+  margin: 0;
+  color: #5D5D5D; /* Couleur pour le contenu */
+  text-decoration: none; /* Pour enlever le soulignement */
+}

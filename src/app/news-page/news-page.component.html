@@ -4,16 +4,15 @@
     <div class="hero">
       <img src="img/climber.png" alt="Climber" class="hero-image">
       <div class="hero-text">
-        <h1>{{ 'à la une' | uppercase }}</h1>
+        <h1>Nos Actus</h1>
       </div>
     </div>
 
     <div class="content-wrapper">
       <div class="content">
-        <h2>Titre</h2>
         <mat-grid-list cols="3" rowHeight="1:1" gutterSize="16px">
           <mat-grid-tile *ngFor="let actu of displayedActus">
-            <app-news [title]="actu.title" [content]="actu.content"></app-news>
+            <app-news [title]="actu.title" [content]="actu.content" [imageUrl]="actu.imageUrl"></app-news>
           </mat-grid-tile>
         </mat-grid-list>
         <button mat-raised-button color="primary" (click)="loadMore()" *ngIf="displayedActus.length < allActus.length">Charger plus</button>
